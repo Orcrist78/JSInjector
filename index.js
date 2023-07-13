@@ -19,7 +19,7 @@
     document.documentElement.innerHTML = '';
 
     const html = await (await fetch(location.href)).text();
-    const sandbox = 'allow-scripts allow-same-origin allow-popups allow-modals allow-forms allow-downloads';
+    const sandbox = 'allow-scripts allow-same-origin allow-popups allow-modals allow-forms allow-downloads allow-presentation';
     const { contentDocument: doc, contentWindow: win, style } = document.body.appendChild(
       Object.assign(document.createElement('iframe'), { sandbox, id })
     );
